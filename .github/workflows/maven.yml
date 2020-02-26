@@ -17,4 +17,4 @@ jobs:
     - name: Publish Maven Artifacts
       run: mvn deploy --settings .m2/settings.xml     
       env:
-         GITHUB_TOKEN: ${{secrets.GANESH}}  #npm_token
+         GITHUB_TOKEN: ${{secrets.GANESHJ}}  #npm_token
