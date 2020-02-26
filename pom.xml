@@ -4,7 +4,7 @@
     <groupId>com.ramcodemo.tutorial</groupId>
     <artifactId>addressbook</artifactId>
     <packaging>war</packaging>
-    <version>2.3.7</version>
+    <version>2.3.8</version>
     <name>Vaadin Addressbook example</name>
 
     <properties>
@@ -12,9 +12,6 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <vaadin.version>8.0.0.alpha2</vaadin.version>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
-  	<sonar.projectKey>GaneshBabu-J_GitHub-Ramco-Demo</sonar.projectKey>
-  	<sonar.organization>ganeshbabu-j</sonar.organization>
-  	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
     
     <repositories>
@@ -208,7 +205,6 @@
         <artifactId>sonar-maven-plugin</artifactId>
         <version>3.6.1.1688</version>
       </plugin>
-
         </plugins>
 		<finalName>addressbook</finalName>
     </build>
@@ -233,6 +229,36 @@
             </activation>
 
         </profile>
+	      <profile>
+		<id>sonar</id>
+		<properties>
+			<sonar.sources>.</sonar.sources>
+			<sonar.inclusions>src/main/java/**,src/main/resources/**</sonar.inclusions>
+			<sonar.projectKey>GaneshBabu-J_GitHub-Ramco-Demo</sonar.projectKey>
+  			<sonar.organization>ganeshbabu-j</sonar.organization>
+  			<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		</properties>
+		<activation>
+			<activeByDefault>false</activeByDefault>
+		</activation>
+		<build>
+			<plugins>
+				<plugin>
+					<groupId>org.sonarsource.scanner.maven</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>3.7.0.1746</version>
+					<executions>
+						<execution>
+							<phase>verify</phase>
+							<goals>
+								<goal>sonar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</build>
+	</profile>
         <profile>
             <id>metrics</id>
             <build>
