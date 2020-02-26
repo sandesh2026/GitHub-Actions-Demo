@@ -17,7 +17,9 @@ jobs:
     - name: Code Review with Maven
       run: mvn pmd:pmd
     - name: Testing with Maven
-      run: mvn test    
+      run: mvn test  
+    - name: CoverageChecks with Maven
+      run: mvn cobertura:cobertura -Dcobertura.report.format=xml  
     - name: Build with Maven
       run: mvn package            
     - name: Publish Maven Artifacts
