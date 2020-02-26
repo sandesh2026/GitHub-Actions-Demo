@@ -12,6 +12,9 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <vaadin.version>8.0.0.alpha2</vaadin.version>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
+  	<sonar.projectKey>GaneshBabu-J_GitHub-Ramco-Demo</sonar.projectKey>
+  	<sonar.organization>ganeshbabu-j</sonar.organization>
+  	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
     
     <repositories>
@@ -501,11 +504,6 @@
             </reporting>
         </profile>
     </profiles>
-  <properties>
-  <sonar.projectKey>GaneshBabu-J_GitHub-Ramco-Demo</sonar.projectKey>
-  <sonar.organization>ganeshbabu-j</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    </properties>
   <distributionManagement>
     <repository>
       <id>github</id>
