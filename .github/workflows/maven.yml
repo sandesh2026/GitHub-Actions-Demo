@@ -17,4 +17,4 @@ jobs:
     - name: Publish Maven Artifacts
       run: mvn deploy  
       env:
-         GH_RAMCO: ${{secrets.GANESHJ}}  #npm_token
+         GITHUB_TOKEN: ${{secrets.GANESHJ}}  #npm_token
