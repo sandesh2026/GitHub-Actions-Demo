@@ -21,8 +21,34 @@ jobs:
     - name: CoverageChecks with Maven
       run: mvn cobertura:cobertura -Dcobertura.report.format=xml  
     - name: Build with Maven
-      run: mvn package            
-    - name: Publish Maven Artifacts
-      run: mvn deploy
-      env:
+      run: mvn package
+  sonar:
+    name: Test - SonarCloud Scan
+    runs-on: ubuntu-18.04
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: SonarCloud Scan
+        run: mvn -B clean verify -Psonar -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GANESHJ }}
+  aritifacts:             
+    name: Publish Maven Artifacts
+    runs-on: [ubuntu-18.04]
+    needs: [build, sonar]
+    
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Publish artifact on GitHub Packages
+        run: mvn deploy
+        env:
          GITHUB_TOKEN: ${{secrets.GANESHJ}}  #npm_token
