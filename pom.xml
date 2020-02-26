@@ -4,7 +4,7 @@
     <groupId>com.edurekademo.tutorial</groupId>
     <artifactId>addressbook</artifactId>
     <packaging>war</packaging>
-    <version>2.3.1</version>
+    <version>2.3.2</version>
     <name>Vaadin Addressbook example</name>
 
     <properties>
@@ -501,16 +501,11 @@
             </reporting>
         </profile>
     </profiles>
-	<distributionManagement>
+  <distributionManagement>
     <repository>
       <id>github</id>
-      <url>https://maven.pkg.github.com/ganeshbabu-j/GitHub-Ramco-Demo</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
+      <name>GitHub ganeshbabu-j Apache Maven Packages</name>
+	    <url>https://maven.pkg.github.com/ganeshbabu-j/GitHub-Ramco-Demo</url>
     </repository>
   </distributionManagement>
 
