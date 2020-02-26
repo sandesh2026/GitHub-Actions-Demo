@@ -11,7 +11,13 @@ jobs:
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
       with:
-        java-version: 1.8     
+        java-version: 1.8
+    - name: Compile with Maven
+      run: mvn compile
+    - name: Code Review with Maven
+      run: mvn pmd:pmd
+    - name: Testing with Maven
+      run: mvn test    
     - name: Build with Maven
       run: mvn package            
     - name: Publish Maven Artifacts
