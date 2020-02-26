@@ -15,6 +15,6 @@ jobs:
     - name: Build with Maven
       run: mvn package            
     - name: Publish Maven Artifacts
-      run: mvn deploy -Dregistry=https://maven.pkg.github.com/GaneshBabu-J -Dtoken=GH_SECRET    
+      run: mvn deploy --settings.xml .m2/settings.xml  
       env:
          GH_SECRET: ${{secrets.GANESHJ}}  #npm_token
