@@ -34,9 +34,9 @@ jobs:
         with:
           java-version: 1.8
       - name: SonarCloud Scan
-        run: mvn -B clean verify -Psonar -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: mvn -B clean verify -Psonar -Dsonar.login=${{ secrets.sonar }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GANESHJ }}
+          GITHUB_TOKEN: ${{ secrets.sandesh }}
   aritifacts:             
     name: Publish Maven Artifacts
     runs-on: ubuntu-latest
@@ -51,4 +51,4 @@ jobs:
       - name: Publish artifact on GitHub Packages
         run: mvn deploy
         env:
-         GITHUB_TOKEN: ${{secrets.GANESHJ}}  #npm_token
+         GITHUB_TOKEN: ${{secrets.sandesh}}  #npm_token
