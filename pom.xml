@@ -538,8 +538,8 @@
   <distributionManagement>
     <repository>
       <id>github</id>
-      <name>GitHub ganeshbabu-j Apache Maven Packages</name>
-	    <url>https://maven.pkg.github.com/ganeshbabu-j/GitHub-Ramco-Demo</url>
+      <name>GitHub sandesh2026 Apache Maven Packages</name>
+	    <url>https://maven.pkg.github.com/sandesh2026/GitHub-Ramco-Demo</url>
     </repository>
   </distributionManagement>
 
