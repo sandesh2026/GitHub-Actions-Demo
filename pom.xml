@@ -539,7 +539,7 @@
     <repository>
       <id>github</id>
       <name>GitHub sandesh2026 Apache Maven Packages</name>
-	    <url>https://maven.pkg.github.com/sandesh2026/GitHub-Ramco-Demo</url>
+	    <url>https://maven.pkg.github.com/sandesh2026/GitHub-Actions-Demo</url>
     </repository>
   </distributionManagement>
 
