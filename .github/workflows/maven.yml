@@ -35,5 +35,7 @@ jobs:
           java-version: 1.8
       - name: Publish artifact on GitHub Packages
         run: mvn deploy
+      - name: Deploy application to Tomcat
+        run : curl -T "https://maven.pkg.github.com/sandesh2026/GitHub-Actions-Demo/" "http://sandesh:${{secrets.TOMCAT}}@737b0143.ngrok.io/manager/text/deploy?path=/codedevopstest&update=true"
         env:
          GITHUB_TOKEN: ${{secrets.sandesh}}  #npm_token
