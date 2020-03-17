@@ -38,4 +38,5 @@ jobs:
         env:
          GITHUB_TOKEN: ${{secrets.sandesh}}  #npm_token
       - name: Push to tomcat
-        run: mvn install tomcat8-maven-plugin:deploy
+        run: mvn tomcat8:run
+
