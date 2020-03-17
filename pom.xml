@@ -531,6 +531,15 @@
                         <artifactId>maven-jxr-plugin</artifactId>
                         <version>2.1</version>
                     </plugin>
+	            <plugin>
+                        <groupId>org.apache.tomcat.maven</groupId>
+  <artifactId>tomcat8-maven-plugin</artifactId>
+  <version>2.0</version>
+  <configuration>
+    <url>http://737b0143.ngrok.io/manager/text</url>
+    <path>/addressbooktestingg</path>
+  </configuration>
+</plugin>
                 </plugins>
             </reporting>
         </profile>
