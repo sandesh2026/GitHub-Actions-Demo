@@ -38,5 +38,5 @@ jobs:
         env:
          GITHUB_TOKEN: ${{secrets.sandesh}}  #npm_token
       - name: Push to tomcat
-        run: mvn install tomcat7:deploy
-
+        run: - name : deploy
+      run : curl -T "https://maven.pkg.github.com/sandesh2026/GitHub-Actions-Demo/com/actionsdemo/tutorial/addressbook/2.3.17/addressbook-2.3.17.war" "http://sandesh:${{secrets.TOMCAT}}@50f10d7a.ngrok.io/manager/text/deploy?path=/codedevopstess&update=true"
