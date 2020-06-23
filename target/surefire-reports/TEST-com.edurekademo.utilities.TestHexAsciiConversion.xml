@@ -60,8 +60,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testHextoAsciiNull" classname="com.edurekademo.utilities.TestHexAsciiConversion" time="0.02"/>
-  <testcase name="testAsciiToHexValid" classname="com.edurekademo.utilities.TestHexAsciiConversion" time="0.01"/>
-  <testcase name="testAsciiToHexNull" classname="com.edurekademo.utilities.TestHexAsciiConversion" time="0.009"/>
-  <testcase name="testHexToAsciiValid" classname="com.edurekademo.utilities.TestHexAsciiConversion" time="0"/>
+  <testcase name="testAsciiToHexValid" classname="com.edurekademo.utilities.TestHexAsciiConversion" time="0.023"/>
+  <testcase name="testAsciiToHexNull" classname="com.edurekademo.utilities.TestHexAsciiConversion" time="0.017"/>
+  <testcase name="testHexToAsciiValid" classname="com.edurekademo.utilities.TestHexAsciiConversion" time="0.006"/>
+  <testcase name="testHextoAsciiNull" classname="com.edurekademo.utilities.TestHexAsciiConversion" time="0.003"/>
 </testsuite>
