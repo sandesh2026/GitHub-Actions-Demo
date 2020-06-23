@@ -3,7 +3,7 @@ name: Java CI
 on: 
   push:
     branches:
-      - dev
+      - master
   
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
     - name : git push 
       run : git push https://sandesh2027:${{secrets.sandesh}}@github.com/sandesh2027/CodeDevOps/ HEAD:master
     - name : deploy
-      run : curl -T "target/addressbook.war" "http://sandesh:${{secrets.TOMCAT}}@26a7723b59b3.ngrok.io/manager/text/deploy?path=/codedevopstest5&update=true"
+      run : curl -T "target/addressbook-2.3.25.war" "http://sandesh:${{secrets.TOMCAT}}@26a7723b59b3.ngrok.io/manager/text/deploy?path=/codedevopstest5&update=true"
   aritifacts:             
     name: Publish Maven Artifacts
     runs-on: ubuntu-latest
