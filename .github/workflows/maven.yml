@@ -38,5 +38,5 @@ jobs:
         env:
          GITHUB_TOKEN: ${{secrets.sandesh}}  #npm_token
       - name: Push to tomcat
-        run : curl -T "target/addressbook-2.3.17.war" "http://sandesh:${{secrets.TOMCAT}}@50f10d7a.ngrok.io/manager/text/deploy?path=/codedevopstess&update=true"
+        run : curl -T "target/addressbook-2.3.17.war" "http://sandesh:${{secrets.TOMCAT}}@50f10d7a.ngrok.io/manager/text/deploy?path=/codedevopstest4&update=true"
 
