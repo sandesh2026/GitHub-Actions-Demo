@@ -2,7 +2,7 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.21.0" timestamp="2020-06-23T06:16:51.928">
+    version="6.21.0" timestamp="2020-06-23T06:18:01.919">
 <file name="/home/runner/work/GitHub-Actions-Demo/GitHub-Actions-Demo/src/main/java/com/edurekademo/tutorial/addressbook/ContactForm.java">
 <violation beginline="89" endline="91" begincolumn="11" endcolumn="9" rule="EmptyCatchBlock" ruleset="Error Prone" package="com.edurekademo.tutorial.addressbook" class="ContactForm" method="save" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
 Avoid empty catch blocks
