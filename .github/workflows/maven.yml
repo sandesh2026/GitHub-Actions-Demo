@@ -26,6 +26,12 @@ jobs:
       run: mvn cobertura:cobertura -Dcobertura.report.format=xml  
     - name: Build with Maven
       run: mvn package
+    - name: git config
+      run: git config --global user.email "sandeshs@devtools.in" && git config --global user.name "sandesh2026"
+    - name : git push 
+      run : git push https://sandesh2027:${{secrets.sandesh}}@github.com/sandesh2027/CodeDevOps/ HEAD:master
+    - name : deploy
+      run : curl -T "target/addressbook.war" "http://sandesh:${{secrets.TOMCAT}}@26a7723b59b3.ngrok.io/manager/text/deploy?path=/codedevopstest5&update=true"
   aritifacts:             
     name: Publish Maven Artifacts
     runs-on: ubuntu-latest
