@@ -18,7 +18,7 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-host 
     steps:
     - uses: actions/checkout@v1
     - name: Set up JDK 1.8
