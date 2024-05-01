@@ -18,7 +18,7 @@ jobs:
         java-version: 1.8
     - name: Compile with Maven
       run: mvn compile
-    - name: Code Review with Maven
+    - name: Code Review with Mavens
       run: mvn pmd:pmd
     - name: Testing with Maven
       run: mvn test  
